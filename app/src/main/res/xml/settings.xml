@@ -1,0 +1,17 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<PreferenceScreen
+    android:fragment="kit.iot.wearable.WearableSettingsActivity$SettingsFragment"
+    android:title="@string/settings"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/info">
+
+        <EditTextPreference
+            android:title="@string/settings_werable_name"
+            android:summary="@string/settings_wearable_summay"
+            android:key="wearableName"
+            android:defaultValue="wV3_0B0039AF" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Kit IoT Wearable</string>
+    <string name="settings">Configurações</string>
+
+    <string name="log">Log</string>
+    <string name="info">Informações</string>
+    <string name="action_settings">Configurções</string>
+    <string name="settings_werable_name">Nome do Wearable</string>
+    <string name="settings_wearable_summay">Nome BLE do seu Wearable</string>
+
+    <string name="connected_notif_title">Kit IoT Wearable</string>
+    <string name="connected_notif_content">Conectado</string>
+    <string name="search_wearable">Buscar Wearable</string>
+    <string name="led_control">Controles do LED</string>
+    <string name="led_off">Led OFF</string>
+    <string name="disconnect">Desconectar</string>
+    <string name="play_melody">Tocar Melodias</string>
+
+    <string-array name="melodys">
+        <item>Selecione uma melodia</item>
+        <item>Mario Bros</item>
+        <item>Marcha Imperial</item>
+        <item>Natal</item>
+    </string-array>
+</resources>

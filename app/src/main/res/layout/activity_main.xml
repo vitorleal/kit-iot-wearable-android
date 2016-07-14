@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:clickable="false">
+
+    <Button
+        android:id="@+id/findWearable"
+        android:text="@string/search_wearable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Button.Light_Blue.Big"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/ic_wearable_icon"/>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/loader"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        wheel:matProg_barColor="@color/light_blue"
+        wheel:matProg_progressIndeterminate="true"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/findWearable"
+        android:layout_alignParentStart="true"
+        android:id="@+id/commandsFrame"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/led_control"
+                android:id="@+id/ledLabel"
+                android:layout_gravity="start|top"
+                android:textColor="@color/blue" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/led_off"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ledOff"
+                style="@style/Button.Light_Blue" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledRed"
+                android:max="255"
+                android:layout_marginTop="30dp"
+                android:progressTint="@color/red"
+                android:thumbTint="@color/red" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledGreen"
+                android:max="255"
+                android:layout_marginTop="30dp"
+                android:progressTint="@color/green"
+                android:thumbTint="@color/green" />
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ledBlue"
+                android:max="255"
+                android:layout_marginTop="30dp"
+                android:progressTint="@color/light_blue"
+                android:thumbTint="@color/light_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/play_melody"
+                android:id="@+id/playMelodyLabel"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="start|top"
+                android:textColor="@color/blue" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/playMelody"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/melodys" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disconnect"
+                android:layout_marginTop="50dp"
+                android:id="@+id/disconnect"
+                style="@style/Button.Red" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
